@@ -1,0 +1,54 @@
+.containter{
+    width: 96%;
+    float: left;
+    position: absolute;
+    display: block;
+    height: 100%;
+}
+.left-bar{
+    background-color: aliceblue;
+    float: left;
+    width: 30%;
+    height: 100%;
+    display: block;
+    position: relative;
+}
+.main{
+    background-color: antiquewhite;
+    float: left;
+    width: 70%;
+    height: 100%;
+    align-items: center;
+    position: relative;
+}
+.main-menu{
+    margin-left: 400px;
+    display: block;
+}   
+.main-menu ul li{
+    text-decoration: none;
+    list-style-type: none;
+    float: left;
+    font-family: inter;
+    padding: 14;
+    border-spacing: 6;
+}
+.left-menu{
+    float: left;
+    margin-top: 200;
+    display: block;
+}
+.left-menu ul li{
+    text-decoration: none;
+    flex-direction: row;
+    list-style-type: none;
+    float: center;
+    font-family: inter;
+    padding: 14;
+    border-spacing: 6;
+    display: block;
+}
+ul li a{
+    text-decoration: none;
+    color: black;
+}
