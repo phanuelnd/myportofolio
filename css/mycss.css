@@ -174,17 +174,25 @@ margin-left: 20%;
     background-color:#EFEFEF;
 }
 .ui{
-    background-color:#EFEFEF;
+     background-color:#EFEFEF;
     margin-left: -20%;
-
+    margin-top: 2%;
 }
 .app{
     background-color:#EFEFEF;
-    margin-top: -53%;
+    margin-top: -51%;
     margin-left: 45%;
 }
 .soft{
     background-color:#EFEFEF;
-    margin-top: 0%;
+    margin-top: 2%;
     margin-left: 45%;
 }
+.webb{
+    text-align: justify;
+}
+.services h4,h2{
+    color: blue;
+}
+.services label
+{text-align: justify;}
