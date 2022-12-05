@@ -16,6 +16,56 @@
     display: block;
     position: relative;
 }
+
+td {
+    border-collapse: collapse;
+}
+
+.services
+{
+    height: 90%;
+    width: 100%;
+    margin-left: -20%;
+    margin-top: 18%;
+}
+
+
+.main-menu1 {
+    position: fixed;
+    overflow: hidden;
+    background-color: rgb(94, 66, 66);
+    top: 0; 
+    width: 100%; 
+  }
+  
+  .main-menu1 a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* Change background on mouse-over */
+  .main-menu1 a:hover {
+    background: #ddd;
+    color: black;
+  }
+
+.button {
+    background-color: #2E61E3; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius:12px;
+    margin-left: 2%;
+    cursor: hand;
+  }
 *
 {
     font-family:inter;
@@ -27,8 +77,9 @@
     align-items: center;
     position: relative;
 }
+
 .main-menu, .main-menu1{
-    margin-left: 400px;
+    margin-left: 15%;
     display: block;
 }   
 .main-menu ul li, .main-menu1 ul li, .main-menu ul li a, .main-menu1 ul li a{
@@ -40,12 +91,57 @@
     padding: 10;
     border-spacing: 6;
 }
+.buttonContact{
+
+    background-color: #2E61E3; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius:12px;
+    margin-left: 2%;
+    cursor: hand;
+    margin-top: 6%;
+    margin-left: 32%;
+}
+.university{
+height: 60%;
+width: 70%;
+margin-left: 20%;
+}
+.experience
+{
+    height: 100%;
+width: 70%;
+margin-left: 20%;
+
+}
+.logolanguage
+{
+    height: 30%;
+    width: 20%;
+}
+.skills
+{
+    height: 60%;
+    width: 55%;
+    margin-top: 25%;
+
+}
+.lang{
+   position: relative;
+}
+.nobolder{font-weight: 600;}
 .left-menu{
     float: left;
-    margin-top: 200;
     display: block;
 }
-.left-menu ul li, .left-menu ul li a{
+.left-menu ul li,
+ .left-menu ul li a
+ {
     text-decoration: none;
     flex-direction: row;
     list-style-type: none;
@@ -54,6 +150,11 @@
     padding: 14;
     border-spacing: 6;
     display: block;
+
+
+
+
+ 
 }
 
 .aboutMe table{
@@ -61,4 +162,29 @@
     align-items: left;
     width: 400;
     height: 200;
+}
+.web,.ui,.soft,.app
+{
+   
+    height: 40%;
+    width: 60%;
+}
+.web{
+    margin-left: -20%;
+    background-color:#EFEFEF;
+}
+.ui{
+    background-color:#EFEFEF;
+    margin-left: -20%;
+
+}
+.app{
+    background-color:#EFEFEF;
+    margin-top: -53%;
+    margin-left: 45%;
+}
+.soft{
+    background-color:#EFEFEF;
+    margin-top: 0%;
+    margin-left: 45%;
 }
