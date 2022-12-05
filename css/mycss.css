@@ -1,36 +1,43 @@
-.containter{
+.all{
+    height: auto;
+}
+
+.containter,.containter1{
     width: 96%;
     float: left;
     position: absolute;
     display: block;
     height: 100%;
 }
-.left-bar{
-    background-color: aliceblue;
+.left-bar, .left-bar1{
     float: left;
     width: 30%;
     height: 100%;
     display: block;
     position: relative;
 }
-.main{
-    background-color: antiquewhite;
+*
+{
+    font-family:inter;
+}
+.main, .main1{
     float: left;
     width: 70%;
     height: 100%;
     align-items: center;
     position: relative;
 }
-.main-menu{
+.main-menu, .main-menu1{
     margin-left: 400px;
     display: block;
 }   
-.main-menu ul li{
+.main-menu ul li, .main-menu1 ul li, .main-menu ul li a, .main-menu1 ul li a{
     text-decoration: none;
+    flex-direction: row;
     list-style-type: none;
     float: left;
     font-family: inter;
-    padding: 14;
+    padding: 10;
     border-spacing: 6;
 }
 .left-menu{
@@ -38,7 +45,7 @@
     margin-top: 200;
     display: block;
 }
-.left-menu ul li{
+.left-menu ul li, .left-menu ul li a{
     text-decoration: none;
     flex-direction: row;
     list-style-type: none;
@@ -48,7 +55,10 @@
     border-spacing: 6;
     display: block;
 }
-ul li a{
-    text-decoration: none;
-    color: black;
+
+.aboutMe table{
+    padding: 5px;
+    align-items: left;
+    width: 400;
+    height: 200;
 }
