@@ -2,6 +2,7 @@
     <head>
         <title>My Portofolio</title>
         <link rel="stylesheet" href="css/mycss.css">
+        <link rel="stylesheet" href="css/contact.css">
     </head>
     <body>
         <div class="all">
@@ -15,8 +16,8 @@
                 <div class="main1"> 
                         <div class="main-menu1">
                     <ul>
-                        <li><a href="#">Home</a></li><li><a href="#">About</a></li><li><a href="#">Resume</a></li><li><a href="#">Services</a></li>
-                        <li><a href="#">Project</a></li><li><a href="#">Contact Me</a></li>
+                        <li><a href="#">Home</a></li><li><a href="#">About</a></li><li><a href="#education">Resume</a></li><li><a href="#services">Services</a></li>
+                        <li><a href="#">Project</a></li><li><a href="#contactme">Contact Me</a></li><li><a href="login.html">Login</a></li>
                     </ul>  
                          </div>
                         
@@ -71,12 +72,13 @@
             <div class="left-bar">
                 <div class="left-menu">
                     <ul>
-                        <li><a href="#">Education</a></li><li><a href="#">Experience</a></li><li><a href="#">Skills</a>
-                        </li><li><a href="#">Awards</a></li><li>
+                        <li><a href="#education">Education</a></li><li><a href="#experience">Experience</a></li><li><a href="#skills">Skills</a>
+                        </li>
                     </ul>
                 </div>
              </div>  
-            <div class="main"> <div class="university">
+            <div class="main"> 
+                <div class="university" id="education">
                  <h2>Education</h2>  
                  <h3>2019-Present</h3>
                  <h3 class="nobolder">Bachelor of Science in Information System</h3>
@@ -98,7 +100,7 @@
 <br/>
 <br/><br/><br/>
 
-                            <div class="experience">
+                            <div class="experience" id="experience">
                                 <h2>Experience</h2>  
                                 <h3>2019-Present</h3>
                                 <h3 class="nobolder">Individual</h3>
@@ -138,43 +140,36 @@
                                        <h4 class="nobolder">Individual</h4>
                                        <label>Python programming is always my favorite programming language regarding my purpose,<br/> it is in that case 
                                         that I started learning this language by myself  </label></div>
+<br/><br/><br/><br/>
+               <center><div class="languager"><h2 id="skills">Skills</h2>
+                <!-- Mys skills goes btn here  -->
+                <span class="firs">
+        
+     <img src="images/icons/python.jpg" class="logolanguage">
+                </span>
+                <span class="sec">
+       <img src="images/icons/dart.png" class="logolanguage">
+                </span>
 
+                <span class="third">
+      <img src="images/icons/c++.png" class="logolanguage">
+                </span>
 
-                                          
+                <span class="fourth">
+   <img src="images/icons/html.png" class="logolanguage">             
+                </span>
 
- <div class="skills">
-                <h2>Skills</h2>
-                <table>
-                   
-                    <tr>
-                        <td><img src="images/icons/python.jpg" class="logolanguage"></td>
-                        <td>Python</td><td>Intermediate</td>
-                    </tr>
-                    <tr>
-                        <td><img src="images/icons/dart.png" class="logolanguage"></td>
-                        <td>Dart</td><td>Intermediate</td>
-                    </tr>
-                    <tr>
-                        <td><img src="images/icons/c++.png" class="logolanguage"></td>
-                        <td>C++</td><td>Intermediate</td>
-                    </tr>
-                    <tr>
-                        <td><img src="images/icons/html.png" class="logolanguage"></td>
-                        <td>HTML</td><td>Advanced</td>
-                    </tr>
+                <span class="fourth">
+    <img src="images/icons/css.png" class="logolanguage">           
+                                 </span>
 
-                    <tr>
-                        <td><img src="images/icons/css.png" class="logolanguage"></td>
-                        <td>CSS</td><td>Advanced</td>
-                    </tr>
-
-                    <tr>
-                        <td><img src="images/icons/flutter.png" class="logolanguage"></td>
-                        <td>Flutter</td><td>Advanced</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="services"><br/><center>
+                                 <span class="fourth">
+                                    <img src="images/icons/flutter.png" class="logolanguage">          
+                                                                 </span>
+                                                                </div></center>
+                <!-- My skills div end here  -->
+            <!-- </div> -->
+            <div class="services" id="services"><br/><center>
                 <h2>Services</h2>
                 <label>I offer several different services, here's  what I am capable of </label></center><br/>
                 <div class="web"> 
@@ -212,57 +207,68 @@
                 </div>
 </div> 
                
-               <div class="services"><br/><center>
+               <div class="services" id="contactme"><center>
                 <h2>Contact Me</h2>
                 <label>If you just want to talk to me, either business issues or you want any information </label><br/>
             <label>you can reach me via one of the following channels </label></center><br/>
-                <div class="web"> 
-                    <center><br/><h4>WEB DESIGN</h4>
-                    <label class="o">Using different technologies I am able 
-                        to<br/> design website and update them as well 
-                         and <br/> other different web application</h4>
+               
+            <div class="address">
+
+                    <center><br/><h4>Address</h4>
+                        <img src="images/location1.png" class="imagelocation"><br/>
+                    <br/>&nbsp;<label class="address" style="margin-left:3%;">KN 231 ST 14 Kigali </h4>
                     </center>
 
                 </div>
-                <div class="ui">
-                    <center> <br/><h4>UI & UX Design</h4>
-                    <label>There are definitely some shared skills <br/>
-                        that both UI and UX designer need<br/>
-                        including colaboration and user empathy
-                        and communication skills as well</h4>
+                <div class="contactnumber">
+                    <center> <br/><h4>Contact Number</h4>
+                        <img src="images/phonelogo.png" class="imagelocation"><br/>   
+                  <br/> <label>+250 786754853</label>
                     </center>
                 </div>
                 
 
-                <div class="app"> 
-                  <center> <br/><h4>App development </h4>
-                <label>Regarding knowlegde I have on flutter
-                    and  Dart programming Language<br/> 
-                    I am able to develop a Mobile App 
-                    for you or your company </label></center>
+                <div class="email"> 
+                  <center> <br/><h4>Email Address</h4>
+                    <img src="images/email.png" class="imagemail"><br/>
+                <br/><label>ndikumanaphanuel@gmail.com</label></center>
                 </div>
 
 
-                <div class="soft"> 
-                  <center><br/><h4>Software Maintenance</h4>
-                <label> Are you experiencing some fault in your 
-                    software ?<br/> Don’t hestate to reach on us <br/>
-                    so that we can help you</label></center>
+                <div class="website"> 
+                  <center><br/><h4>Website</h4>
+                    <img src="images/website.png" class="imagewebsite"><br/>
+              <br/>  <label> phanuelnd.github.io</label></center>
                 </div>
 
-              
+               </div>
+               <div class="feelfree"><center>
+                <h1> Feel free and let me<br/>
+                    know your wish</h1></center>
+                </div><div class="contctside"><center>
+                    <h2>Contact Me</h2></center><form method="post" action="send.php">
+                    <input type="text" placeholder="Enter your Names" name="name" class="inputtext"><br/><br/>
+                    <input type="text" placeholder="Types your Email" name="email" class="inputtext"><br/><br/><br/>
+                    <textarea cols="24" rows="3" class="inputtext" placeholder="Types your message here......"></textarea>
 
+                  
+<br/><br>
+                    <button type="button" class="sendbutton">Send</button></form>
+                  </div>  
+              </div>  
+           
 
+       
 
-               </div> 
-            </div>  
-
-
+        </div>  
+             
+ </div>  
             
             
          </div>
-         
+           
   </div>
+  
  
     </body>
 </html>

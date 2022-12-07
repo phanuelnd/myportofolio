@@ -1,6 +1,6 @@
 .all{
     height: auto;
-}
+} 
 
 .containter,.containter1{
     width: 96%;
@@ -25,10 +25,12 @@ td {
 {
     height: 90%;
     width: 100%;
-    margin-left: -20%;
-    margin-top: 18%;
+    margin-left: -22%;
+    margin-top: 0%;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 
 .main-menu1 {
     position: fixed;
@@ -47,14 +49,14 @@ td {
     text-decoration: none;
   }
   
-  /* Change background on mouse-over */
   .main-menu1 a:hover {
     background: #ddd;
     color: black;
+    border-radius: 12px;
   }
 
 .button {
-    background-color: #2E61E3; /* Green */
+    background-color: #2E61E3; 
     border: none;
     color: white;
     padding: 15px 32px;
@@ -121,19 +123,21 @@ margin-left: 20%;
 }
 .logolanguage
 {
-    height: 30%;
-    width: 20%;
+    height: 10%;
+    width: 6%;
+    padding: 15px;
+    
 }
 .skills
 {
-    height: 60%;
-    width: 55%;
-    margin-top: 25%;
-
+    height: 70%;
+    width: 100%;
+    margin-top: 24%;
+    margin-left: -20%;
 }
-.lang{
+ .lang{
    position: relative;
-}
+} 
 .nobolder{font-weight: 600;}
 .left-menu{
     float: left;
@@ -196,3 +200,91 @@ margin-left: 20%;
 }
 .services label
 {text-align: justify;}
+.address
+{
+    padding: 5px;
+    align-items: left;
+    width: 300; background-color:#EFEFEF;
+    height: 200;
+    margin-left: -20%;
+}
+.contactnumber
+{
+    padding: 5px;
+    float: left;
+    align-items: left;
+    width: 300;
+    height: 200; background-color:#EFEFEF;
+    margin-left: 14%;
+    margin-top: -19%;
+  
+}
+.email
+{
+    padding: 5px;
+    float: left;
+    align-items: left;
+    width: 300;
+    height: 200;
+    margin-left: 8%;
+    margin-top: -19%; background-color:#EFEFEF;
+
+}
+.website
+{
+    padding: 5px;
+    float: left;
+    align-items: left;
+    width: 300;
+    height: 200;
+    margin-left: 85%;
+    margin-top: -19.2%;
+    background-color:#EFEFEF;
+
+}
+.feelfree
+{
+    width: 40%;
+    height: 15%;
+    margin-top: -27%;
+    margin-left: -40%; 
+    color: blue;
+}
+.contctside
+{
+
+    height: 40%;
+    width: 68%;
+    float: left;
+    margin-left: 28%;
+    margin-top: -10%;
+    background-color:#EFEFEF;
+}
+
+.sendbutton
+{
+    background-color: #2E61E3; /* Green */
+    border: none;
+    color: white;
+    font-weight: 500;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius:12px;
+    margin-left: 5%;
+    cursor: hand;
+    margin-top: 6%;
+    margin-left: 32%;
+}
+.languager
+{
+    margin-left: -35%;
+    margin-top: 20%;
+}
+.imagemail, .imagewebsite, .imagelocation
+{
+    height: 30%;
+    width: 20%;
+}
