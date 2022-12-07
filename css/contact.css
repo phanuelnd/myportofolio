@@ -42,3 +42,40 @@ border-radius: 5px;
   ::placeholder{
     text-align: center;
   }
+  .mywork
+  {
+    height: 60%;
+    width: 100%;
+    margin-left: -40%;
+    margin-top: 20%;
+  }
+  .sendbutton
+  {
+    margin-left: 40%;
+  }
+  .marking
+  {
+    border-radius: 20px;
+    height: 90%;
+    width: auto;
+
+  }
+  .descr
+  {
+    text-align: justify;
+  }
+  .conferenceapp
+  {
+    height: 92%;
+    width: 30%;
+ margin-top: -37%;
+ margin-left: 60%;
+
+  }
+  .conference
+  {
+    height: 90%;
+    border-radius: 12px;
+    width: 97%;
+    margin-top: 4%;
+  }

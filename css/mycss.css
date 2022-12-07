@@ -15,6 +15,10 @@
     height: 100%;
     display: block;
     position: relative;
+
+
+ 
+    z-index: 1;
 }
 
 td {
@@ -35,9 +39,14 @@ html{
 .main-menu1 {
     position: fixed;
     overflow: hidden;
-    background-color: rgb(94, 66, 66);
     top: 0; 
     width: 100%; 
+    background-color: rgb(94, 66, 66);
+    -webkit-padding-start: 0px;
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;   
+    border-radius: 4px;
+    z-index: 1;
   }
   
   .main-menu1 a {
@@ -81,8 +90,9 @@ html{
 }
 
 .main-menu, .main-menu1{
-    margin-left: 15%;
     display: block;
+    margin-left:14%;
+    width: 60%;
 }   
 .main-menu ul li, .main-menu1 ul li, .main-menu ul li a, .main-menu1 ul li a{
     text-decoration: none;
@@ -184,7 +194,7 @@ margin-left: 20%;
 }
 .app{
     background-color:#EFEFEF;
-    margin-top: -51%;
+    margin-top: -50.5%;
     margin-left: 45%;
 }
 .soft{
@@ -287,4 +297,21 @@ margin-left: 20%;
 {
     height: 30%;
     width: 20%;
+}
+.hiremebutton
+{
+    background-color: #2E61E3; /* Green */
+    border: none;
+    color: white;
+    font-weight: 500;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius:12px;
+    margin-left: 5%;
+    cursor: hand;
+    margin-top: 3%;
+    margin-left: 20%;
 }
