@@ -1,3 +1,5 @@
+
+
 .all{
     height: auto;
 } 
@@ -199,7 +201,7 @@ margin-left: 20%;
 }
 .app{
     background-color:#EFEFEF;
-    margin-top: -47%;
+    margin-top: -50.5%;
     margin-left: 45%;
 }
 .soft{
@@ -435,9 +437,40 @@ margin-left: 20%;
     position: fixed;
     font-size: 10px;
     margin-left: 3%;
+z-index: 1;
+
+}
 
 
- 
-    z-index: 1;
 
+
+@media screen and (max-width: 500px)
+{ 
+   div{
+    display: none;
+   }
+ img{
+    width: 30%;
+    height: auto;
+ }
+ .test1
+ {
+    width: 20%;
+    height: auto;
+ }
+ .aboutMe{
+padding: 4px 4px 4px 4px;
+ }
+ .imageblo
+ {
+    visibility: hidden;
+ }
+ .leftpart
+ {
+    visibility: hidden;
+ }
+ ul li a {
+    display: none;
+    
+ }
 }
