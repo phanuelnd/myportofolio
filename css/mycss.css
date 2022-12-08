@@ -41,19 +41,23 @@ html{
     overflow: hidden;
     top: 0; 
     width: 100%; 
-    background-color: rgb(94, 66, 66);
+    /* background-color: rgb(94, 66, 66); */
     -webkit-padding-start: 0px;
     -webkit-margin-before: 0px;
     -webkit-margin-after: 0px;   
     border-radius: 4px;
     z-index: 1;
+    background-color: white;
+    color: black;
   }
   
   .main-menu1 a {
     float: left;
     display: block;
-    color: white;
+    /* color: white; */
+    color: black;
     text-align: center;
+    font-weight: bold;
     padding: 14px 16px;
     text-decoration: none;
   }
@@ -356,8 +360,8 @@ margin-left: 20%;
 {
     height: 40%;
     width: 60%;
-    margin-top: -9%;
-    margin-left: 16%;
+    margin-top: -12%;
+    margin-left: 18%;
 }
 .gettoknow
 {
@@ -367,7 +371,7 @@ margin-left: 20%;
 .rightlinux
 {
     height: 20%;
-    width: 60%;
+    width: 50%;
     margin-top: 1%;
     margin-left: 47%;
 
@@ -375,7 +379,7 @@ margin-left: 20%;
 .rightcyber
 {
     height: 20%;
-    width: 60%;
+    width: 45%;
     margin-top: 1%;
     margin-left: 46%;
 
@@ -385,14 +389,15 @@ margin-left: 20%;
     height: 150%;
     width: auto;
     border-radius: 70px;
+   
 
 }
 .text3
 {
     height: 40%;
     width: 60%;
-    margin-top: -12%;
-    margin-left: 16%;
+    margin-top: -17%;
+    margin-left: 23%;
 
 }
 .seemore
@@ -404,4 +409,6 @@ margin-left: 20%;
     color: blue;
     font-weight: 600;
     font-size: 18px;
+    cursor: hand;
+    
 }
