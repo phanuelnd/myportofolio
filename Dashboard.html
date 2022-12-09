@@ -5,35 +5,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin</title>
+    <title>My Dashboard</title>
    
     <link rel="stylesheet" href="css/mydash.css">
+
     <script src="https://kit.fontawesome.com/c6d6e74636.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="main-dash-container">
         <div class="top-nav">
-            <h2>Admin Pannel</h2>
+          <center><h2 class="dashbord-text">Dashboard</h2></center> 
             <div class="right-coner-icons">
-                <i class="fa-regular fa-envelope"></i>
+                <!-- <i class="fa-regular fa-envelope"></i>
                 <i class="fa-regular fa-bell"></i>
                 <i class="fa-solid fa-gear"></i>
                 <i class="fa-regular fa-user"></i>
-                <i class="fa-solid fa-chevron-down"></i>
+                <i class="fa-solid fa-chevron-down"></i> -->
             </div>
         </div>
         <div class="body-divs">
             <div class="side-nav">
-                <div class="side-title"><p>MAIN NAVIGATIO</p></div>
+                <div class="side-title"><p>MAIN NAVIGATION</p></div>
                 <ul>
-                    <li>Articles</li>
-                    <li>Subscribers</li>
-                    <li>Mails</li>
-                    <li>Users</li>
+                    <li>Home</li>
+                    <li>Notification</li>
+                    <li>Your Blogs</li>
                     <li>Settings</li>
                 </ul>
             </div>
-            <div class="main-dashboard">
+            <!-- <div class="main-dashboard">
                 <div class="main-sub-dash">
                     <div class="right-text">
                         <h2>Admin tasks: </h2>
@@ -79,9 +79,38 @@
     <td>Giovanni Rovelli</td>
     <td>Italy</td>
   </tr>
+</table> -->
+
+<center>
+  <div class="form1">
+    <table>
+      <tr><th>
+        <label>Title</label></th><th>Author</th><th><label>Descrption</label></th><th><label>Action</label></th></tr>
+      <tr><td>
+      <label>Flutter</label></td><td>Phanuel</td><td><label>Introduction to flutter</label></td><td>Edit</td><td>Delete</td></tr>
+      <tr><td><label>Dart</label></td><td>Phanuel<td>Get to Know Dart</td><td>Edit</td><td>Delete</td></tr>
+      <tr><td><label>Cyber Security</label></td><td>Phanuel</td><td>Know more about information Security</td><td>Edit</td><td>Delete</td></tr>
+      
 </table>
+</div>
+<div class="form">
+
+  <label class="ablog">Creating a Blog</label>
+      <form method="post" action="send.php"><table border="0"><tr><td>
+      <label>Title: </label></td><td><input type="text" placeholder="Enter a blog title" name="name" class="inputtext"></td></tr>
+      <tr><td><label>Author</label> </td><td><input type="text" placeholder="Put author name Here..." name="email" class="inputtext"></td></tr>
+      <tr><td><label>Descrption</label></td><td><textarea cols="24" rows="3" class="inputtext" placeholder="Write your Descrption of th blog here...."></textarea></td></tr>
+      
+</table>
+  <br/>
+      <button type="button" class="sendbutton">Post</button></form>
+    </div> 
+    <a href="index.html" style="text-decoration: none; color:blue;font-family: inter;"> Back to user's page</a></label>
+   
+
             </div>
         </div>
+       
     </div>
 </body>
 </html>
