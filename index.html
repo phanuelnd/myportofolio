@@ -1,8 +1,25 @@
 <html>
     <head>
         <title>My Portofolio</title>
-        <link rel="stylesheet" href="css/mycss.css">
-        <link rel="stylesheet" href="css/contact.css">
+  
+     <link rel="stylesheet" href="css/mycss.css">
+     <link rel="stylesheet" href="css/contact.css">
+     <script>
+        
+function validation(){
+  
+  var name = document.getElementById("name").value;
+  var email = document.getElementById("email").value;
+  var message = document.getElementById("message").value;
+  
+  if(message.length<10){
+    alert('Provide text more than 10 characters');
+  // document.getElementById("falseEmail").innerHTML="Email field cannot be empty";
+  }
+  
+  
+  }
+     </script>
     </head>
     <body>
         <div class="all">
@@ -246,13 +263,20 @@
                 <h1> Feel free and let me<br/>
                     know your wish</h1></center>
                 </div><div class="contctside"><center>
-                    <h2>Contact Me</h2></center><form method="post" action="send.php">
-                    <input type="text" placeholder="Enter your Names" name="name" class="inputtext"><br/><br/>
-                    <input type="text" placeholder="Types your Email" name="email" class="inputtext"><br/><br/><br/>
-                    <textarea cols="24" rows="3" class="inputtext" placeholder="Types your message here......"></textarea>
+                    <h2>Contact Me</h2></center><form  id="form_id" action="" method="post" onsubmit="return validateform()">
+                    <input type="text" placeholder="Enter your Names" name="name" class="inputtext" required id="name">
+                    <br/><br/>
+                    <input type="text" placeholder="Types your Email"  name="email" class="inputtext" required id="email">
+                    <br/><br/><br/>
+                    <textarea cols="24" rows="3" name="content" class="inputtext" placeholder="Types your message here......" 
+                    required id="message"></textarea>
 
                 
-                    <button type="button" class="sendbutton">Send</button></form>
+                    <!-- <button type="button" ></button> -->
+                
+                    <button type="submit" class="sendbutton" onclick="validation()">Send</button>
+                    <p class="" id="result"></p>
+                </form>
                   </div>  <br><br>
                    <div class="mywork" id="mywork"><center><h3>My Project</h3></center>
             <img src="images/urmma.jpg" class="marking">

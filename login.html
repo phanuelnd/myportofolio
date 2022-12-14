@@ -4,6 +4,52 @@
 Login
         </title>
         <link rel="stylesheet" href="css/login.css">
+        <script>  
+
+            var attempt = 5; 
+      
+function validate(){
+var username = document.getElementById("username").value;
+var password = document.getElementById("password").value;
+var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+if(username=="" && password=="")
+{
+    document.getElementById("falseEmail").innerHTML="Email field cannot be empty";
+    document.getElementById("falsePassword").innerHTML="Password field cannot be empty";
+}
+else if(username==""){
+document.getElementById("falseEmail").innerHTML="Email field cannot be empty";
+}
+else if(password=="")
+{
+    document.getElementById("falsePassword").innerHTML="Password field cannot be empty";
+    
+}
+else
+{
+if ( username == "ndikumanaphanuel@gmail.com" && password == "Password"){
+alert ("Login successfully");
+window.location = "Dashboard.html";
+return false;
+}
+else{
+attempt --;
+// alert("You have left "+attempt+" attempts to try If your Attempst Finishes You will be blocked from writing anything;");
+document.getElementById("attemptRemain").innerHTML="Your credentials are incorrect. You remain "+attempt+ " attempts to try"
+
+if( attempt == 0){
+document.getElementById("username").disabled = true;
+document.getElementById("password").disabled = true;
+document.getElementById("submit").disabled = true;
+return false;
+}
+}
+}
+}
+
+           
+
+            </script>  
     </head>
     <body>
         <div class="container">
@@ -15,18 +61,20 @@ Login
                         <small>to Upload some of your Blog </small>
                     </h2>
                 </div>
-                <form class="card-form">
-                    
+                <form  id="form_id" method="post" name="myform" class="card-form" action="" onsubmit="return validateform()">
+                <label id="attemptRemain" style="color:red; font-style:italic;"></label>
                                 <div class="input">
-                        <input type="text" class="input-field" required placeholder="Types your Email here......."/>
+                        <input type="text" class="input-field" required placeholder="Types your Email here......." name="username" id="username"/>
                     
                     </div>
-                                <div class="input">
-                        <input type="password" class="input-field" required placeholder="Types your Password here......." />
+                     <label id="falseEmail" style="color:red; font-style:italic;"></label>           <div class="input">
+                        <input type="password" class="input-field" required placeholder="Types your Password here......."name="password" id="password" />
                        
                     </div> 
+                    <label id="falsePassword" style="color:red; font-style:italic;"></label>  
                     <div class="action">
-                       <button class="action-button"><a href="Dashboard.html" style="text-decoration: none; color:white;font-weight: 600;">Login</button></a>
+                       <input type="button" class="action-button"  value="Login" id="submit" onclick="validate()">
+                       <!-- <a href="Dashboard.html" style="text-decoration: none; color:white;font-weight: 600;">Login</button></a> -->
                     </div>
                 </form>
                 <div class="card-info">

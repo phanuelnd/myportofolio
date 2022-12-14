@@ -4,6 +4,16 @@
     height: auto;
 } 
 
+input[type=text]:focus{
+    border-color:dodgerBlue;
+    box-shadow:0 0 8px 0 dodgerBlue;
+  }
+
+  textarea:focus{
+    border-color:dodgerBlue;
+    box-shadow:0 0 8px 0 dodgerBlue;
+  }
+
 .containter,.containter1{
     width: 96%;
     float: left;
@@ -474,3 +484,4 @@ padding: 4px 4px 4px 4px;
     
  }
 }
+
