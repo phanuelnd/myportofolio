@@ -37,7 +37,7 @@
     list-style:circle;
     color: white;
     font-size: 18px;
-    padding-top: 50px;
+    padding-top: 40px;
     padding-left: 40px;
    font-family: inter;
    cursor: hand;
@@ -79,11 +79,10 @@
     justify-content: space-between;
     align-items: center;
 }
-.right-coner-icons{
-    display: flex;
-    gap: 40px;
-    font-size: 20px;
-    color: white;
+.right-coner-icons{ 
+    font-size: 18px;
+    font-family: inter;
+    font-weight: 400;
 }
 .top-nav h2{
     color: white;
@@ -148,7 +147,7 @@ table {
     width: 200%;
     height: auto;
     margin-left: auto;
-    margin-top: 10%;
+    margin-top: 3%;
 
   }
   .form1
@@ -156,7 +155,7 @@ table {
     margin-left: auto;
     width: 200%;
     height: auto;
-    margin-top: 10%;
+    margin-top: 5%;
 
   }
 
@@ -186,6 +185,8 @@ table {
   {
     font-family: inter;
 font-size: 20px;
+font-style: italic;
+font-weight: 500;
   
   }
 
@@ -198,3 +199,66 @@ font-size: 20px;
       border-collapse:collapse;
       caption-side:bottom;
   }
+
+  .input-file{
+    background-color: #f8f9fc;
+    border: 1px solid #e2e9f3;
+    border-radius: 4px;
+    height: 40px;
+    width: 500px;
+    color: #565A90;
+    margin-left: 2.5%;
+}
+.input-file::file-selector-button{
+    border: none;
+    border-radius: 4px;
+    color: white;
+    background-color: #474bd8bd;
+    border: 1px solid #595ef1bd;
+    height: 40px;
+    cursor: pointer;
+    transition: all .25s ease-in;
+    cursor: pointer;
+}
+.input-file::file-selector-button:hover{
+    background-color: #fff;
+    color: #565A90;
+    transition: all .25s ease-in;
+}
+.right-coner-icons a{
+  text-decoration: none;
+  color: white;
+  margin-left: -30%;
+}
+  
+  .side-nav ul li:hover{
+    list-style:circle;
+    cursor: pointer;
+    font-size: 18px;
+   font-family: inter;
+   color: rgb(21, 220, 235);
+
+}
+
+div.gallery {
+  font-family: inter;
+  float: left;
+  width: 180px;
+  padding-left: 30px;
+}
+
+div.gallery img {
+  width: 90px;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+.allBlogs
+{
+  height: 40%;
+  width: 140%;
+  margin-left: 30%;
+}

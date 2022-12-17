@@ -16,97 +16,62 @@
         <div class="top-nav">
           <center><h2 class="dashbord-text">Dashboard</h2></center> 
             <div class="right-coner-icons">
-                <!-- <i class="fa-regular fa-envelope"></i>
-                <i class="fa-regular fa-bell"></i>
-                <i class="fa-solid fa-gear"></i>
-                <i class="fa-regular fa-user"></i>
-                <i class="fa-solid fa-chevron-down"></i> -->
+             <h4><a href="login.html">Logout</a></h4>
             </div>
         </div>
         <div class="body-divs">
             <div class="side-nav">
-                <div class="side-title"><p>MAIN NAVIGATION</p></div>
+                <div class="side-title"><p>Menu</p></div>
                 <ul>
                     <li>Home</li>
+                    <li>Blog</li>
+                    <li>Message</li>
                     <li>Notification</li>
-                    <li>Your Blogs</li>
-                    <li>Settings</li>
                 </ul>
             </div>
-            <!-- <div class="main-dashboard">
-                <div class="main-sub-dash">
-                    <div class="right-text">
-                        <h2>Admin tasks: </h2>
-                        <p>Create, Read, Edit, Delete</p>
-                    </div>
-                    <div class="left-text"></div>
-                      <h4>Home</h4>
-                </div>
-                <h2>HTML Table</h2>
-<table>
-  <tr>
-    <th>Company</th>
-    <th>Contact</th>
-    <th>Country</th>
-  </tr>
-  <tr>
-    <td>Alfreds Futterkiste</td>
-    <td>Maria Anders</td>
-    <td>Germany</td>
-  </tr>
-  <tr>
-    <td>Centro comercial Moctezuma</td>
-    <td>Francisco Chang</td>
-    <td>Mexico</td>
-  </tr>
-  <tr>
-    <td>Ernst Handel</td>
-    <td>Roland Mendel</td>
-    <td>Austria</td>
-  </tr>
-  <tr>
-    <td>Island Trading</td>
-    <td>Helen Bennett</td>
-    <td>UK</td>
-  </tr>
-  <tr>
-    <td>L</td>
-    <td>l</td>
-    <td>Canada</td>
-  </tr>
-  <tr>
-    <td>Magazzini Alimentari Riuniti</td>
-    <td>Giovanni Rovelli</td>
-    <td>Italy</td>
-  </tr>
-</table> -->
-
 <center>
-  <div class="form1">
-    <table>
-      <tr><th>
-        <label>Title</label></th><th>Author</th><th><label>Descrption</label></th><th><label>Action</label></th></tr>
-      <tr><td>
-      <label>Flutter</label></td><td>Phanuel</td><td><label>Introduction to flutter</label></td><td>Edit</td><td>Delete</td></tr>
-      <tr><td><label>Dart</label></td><td>Phanuel<td>Get to Know Dart</td><td>Edit</td><td>Delete</td></tr>
-      <tr><td><label>Cyber Security</label></td><td>Phanuel</td><td>Know more about information Security</td><td>Edit</td><td>Delete</td></tr>
-      
-</table>
-</div>
+
 <div class="form">
 
-  <label class="ablog">Creating a Blog</label>
+  <label class="ablog">Add a new Blog</label>
       <form method="post" action="send.php"><table border="0"><tr><td>
       <label>Title: </label></td><td><input type="text" placeholder="Enter a blog title" name="name" class="inputtext"></td></tr>
-      <tr><td><label>Author</label> </td><td><input type="text" placeholder="Put author name Here..." name="email" class="inputtext"></td></tr>
-      <tr><td><label>Descrption</label></td><td><textarea cols="24" rows="3" class="inputtext" placeholder="Write your Descrption of th blog here...."></textarea></td></tr>
+      <tr><td><label>Picture</label> </td><td><input type="file" name="picture"  class="input-file"></td></tr>
+      <tr><td><label>Descrption</label></td><td><textarea cols="24" rows="5" class="inputtext" placeholder="Write your Descrption of th blog here...."></textarea></td></tr>
       
 </table>
   <br/>
       <button type="button" class="sendbutton">Post</button></form>
     </div> 
-    <a href="index.html" style="text-decoration: none; color:blue;font-family: inter;"> Back to user's page</a></label>
-   
+ 
+<br/><br/>
+<div class="allBlogs">
+  <div class="gallery">
+      <img src="images/icons/flutter.png" alt="Flutter" width="600" height="400">
+
+    <div class="desc">Flutter</div>
+    <div class="descrption"> Flutter is framework for Mobile Application development Flutter is an open-source UI ...</div>
+  </div>
+  
+  <div class="gallery">
+ 
+      <img src="images/icons/dart.png" alt="Dart" width="600" height="400">
+
+    <div class="desc">Dart</div>
+    <div class="descrption"> Dart is a programming language designed for client development....</div>
+  </div>
+  
+  <div class="gallery">
+
+      <img src="images/icons/cyber.png" alt="CyberSecurity" width="600" height="400">
+
+    <div class="desc">CyberSecurity</div>
+    <div class="decrption"> Computer security, cybersecurity, 
+      or information technology security ...</div>
+  </div>
+</div>
+  <a href="index.html" style="text-decoration: none; color:blue;font-family: inter;"> Back to user's page</a></label>
+
 
             </div>
         </div>

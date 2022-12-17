@@ -12,8 +12,8 @@ function validation(){
   var email = document.getElementById("email").value;
   var message = document.getElementById("message").value;
   
-  if(message.length<10){
-    alert('Provide text more than 10 characters');
+  if(message.length>50){
+    alert('Text cannot go beyond 50 characters');
   // document.getElementById("falseEmail").innerHTML="Email field cannot be empty";
   }
   
