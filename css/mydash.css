@@ -244,7 +244,9 @@ div.gallery {
   font-family: inter;
   float: left;
   width: 180px;
-  padding-left: 30px;
+  padding-left: 20px;
+  border: 1px solid rgb(233, 114, 114);
+  margin: 4px;
 }
 
 div.gallery img {
@@ -255,10 +257,20 @@ div.gallery img {
 div.desc {
   padding: 15px;
   text-align: center;
+  font-weight: 500;
+  font-style: italic;
 }
 .allBlogs
 {
   height: 40%;
   width: 140%;
   margin-left: 30%;
+}
+#delete,#edit
+{
+
+  height: 20px;
+  width: auto;
+  cursor: pointer;
+  padding: 20px;
 }
