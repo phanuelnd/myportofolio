@@ -8,6 +8,7 @@
     <title>My Dashboard</title>
    
     <link rel="stylesheet" href="css/mydash.css">
+    <link rel="stylesheet" href="css/blog_list.css">
 
     <script src="https://kit.fontawesome.com/c6d6e74636.js" crossorigin="anonymous"></script>
 </head>
@@ -34,17 +35,23 @@
 <div class="form">
 
   <label class="ablog">Add a new Blog</label>
-      <form method="post" action="send.php"><table border="0"><tr><td>
-      <label>Title: </label></td><td><input type="text" placeholder="Enter a blog title" name="name" class="inputtext"></td></tr>
-      <tr><td><label>Picture</label> </td><td><input type="file" name="picture"  class="input-file"></td></tr>
-      <tr><td><label>Descrption</label></td><td><textarea cols="24" rows="5" class="inputtext" placeholder="Write your Descrption of th blog here...."></textarea></td></tr>
+      <form method="post" id="blog-form" method="post" name="myform"><table border="0"><tr><td>
+      <label>Title: </label></td><td><input type="text" placeholder="Enter a blog title" name="title" id="title" class="inputtext"></td></tr>
+      <!-- <tr><td><label>Picture</label> </td><td><input type="file" name="picture"  class="input-file"></td></tr> -->
+      <tr><td><label>Author</label> </td><td><input type="text" name="author" class="inputtext"></td></tr>
+      <tr><td><label>Descrption</label></td><td><textarea cols="24" rows="5" class="inputtext"
+         placeholder="Write your Descrption of th blog here...." id="blog-content" name="content"></textarea></td></tr>
       
 </table>
   <br/>
-      <button type="button" class="sendbutton">Post</button></form>
+      <!-- <button type="button" class="sendbutton">Post</button> -->
+      <button type="submit" class="sendbutton">Create a Blog</button>
+    
+    </form>
     </div> 
  
 <br/><br/>
+<!-- 
 <div class="allBlogs">
   <div class="gallery">
       <img src="images/icons/flutter.png" alt="Flutter" width="600" height="400">
@@ -89,6 +96,34 @@
         
             </table></div>
   </div>
+</div> -->
+
+
+
+<div class="blog-container" id="blog">
+  <br><br>
+  <h1 class="blog-header">Blogs</h1>
+  <div id="blog-list" class="blog-list">
+      <template id="blog-template">
+          <div class="blog">
+              <h2 id="blog-title" class="blog-title">Lorem, ipsum dolor sit amet consectetur
+                  adipisicing elit.</h2>
+              <h4 id="blog-author" class="blog-author">Lorem, ipsum dolor.</h4>
+              <p id="blog-content" class="blog-content">Lorem ipsum dolor sit amet, consectetur
+                  adipisicing elit. Quae,
+                  veniam
+                  sint similique corrupti aliquam saepe. Dignissimos labore veniam ducimus ex
+                  obcaecati.
+                  Modi odit doloribus fugit magni eius obcaecati accusantium labore!</p>
+                  <div class="btn-list">
+                  <button id="blog-delete">Delete</button>
+              </div>
+          </div>
+          <br><br>
+      </template>
+  </div>
+  <br>
+  <!-- <a href="./create_blog.html" class="btn">Create Blog</a> -->
 </div>
   <a href="index.html" style="text-decoration: none; color:blue;font-family: inter;"> Back to user's page</a></label>
 <br/>
@@ -99,5 +134,7 @@
         </div>
        
     </div>
+    <script src="./js/blog_create.js"></script>
+    <script src="./js/blog_list.js"></script>
 </body>
 </html>

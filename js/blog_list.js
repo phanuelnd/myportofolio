@@ -1,17 +1,3 @@
-/* 
-<template id="blog-template">
-    <div class="blog">
-        <h2 class="blog-title">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h2>
-        <h4 class="blog-author">Lorem, ipsum dolor.</h4>
-        <p class="blog-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, veniam
-            sint similique corrupti aliquam saepe. Dignissimos labore veniam ducimus ex obcaecati.
-            Modi odit doloribus fugit magni eius obcaecati accusantium labore!</p>
-        <div class="btn-list">
-            <button id="blog-delete">Delete</button>
-        </div>
-    </div>
-</template> 
-*/
 
 /**@type {Array} */
 let blogs = JSON.parse(localStorage.getItem("blogs")) || []
