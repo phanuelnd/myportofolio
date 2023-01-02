@@ -14,23 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="css/blog_list.css">
-    <script>
-
-        function validation() {
-
-           var name = document.getElementById("name").value;
-            var email = document.getElementById("email").value;
-            var message = document.getElementById("message").value;
-
-            if (message.length > 50) {
-                alert('Text cannot go beyond 50 characters');
-                // document.getElementById("falseEmail").innerHTML="Email field cannot be empty";
-            }
-            
-
-
-        }
-    </script>
+  <script src="js/contact_me.js"></script>
 </head>
 <body>
 
@@ -254,13 +238,26 @@
 			</div>
 		</div>
 
-		<div class="contact-form">
-			<form action="">
-				<input type="name" placeholder="Your Name" required>
-				<input type="email" placeholder="Your Email Address" required>
-				<input type="" placeholder="Your Mobile Number" required>
-				<textarea name="" id="" cols="35" rows="10" placeholder="How Can I Help You" required></textarea>
-				<input type="submit" value="Send" class="submit">
+		<div class="contact-form" id="Contact"> 
+			<form onsubmit="return validateForm()">
+				<input type="name" placeholder="Provide your name..." id="contact_name" onkeyup="validateName()">
+				<span id="nerror"></span>
+				<input type="text" placeholder="Your Email Address" id="contact_email" onkeyup="validateEmail()"> 
+				<span id="emailerror"></span>
+
+				<input type="" placeholder="Your Mobile Number" id="contact_phone" onkeyup="validatePhone()">
+      <span id="perror"></span>
+	  
+	  <textarea rows="8" id="message"  placeholder="How Can I Help You" onkeyup="validateMessage()">
+	</textarea>
+				<span id="errormessage"></span>
+
+						<!-- <input type="submit" onclick="return validateForm()" id="send_btn" class="submit" value="Send">
+                                    <span id="submit-error"></span> -->
+
+
+									<input type="submit" onclick="return validateForm()" id="send_btn" value="Send" class="submit">
+                                    <span id="senderror"></span>
 			</form>
 		</div>
 	</section>
