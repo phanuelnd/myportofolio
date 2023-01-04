@@ -1,20 +1,18 @@
-const menusOnLeft = document.querySelector("side-nav");
-window.addEventListener ("scroll", function() {
-	menusOnLeft.classList.toggle ("sticky", window.scrollY > 100);
+const header = document.querySelector("header");
+window.addEventListener("scroll", function() {
+	header.classList.toggle("sticky", window.scrollY > 100);
 });
 
 let menu = document.querySelector('#menu-icon');
-let navlist = document.querySelector('.side-title');
-// let topNav = document.querySelector('.top-nav');
+let navlist = document.querySelector('.navList');
 
 menu.onclick = () => {
 	menu.classList.toggle('bx-x');
 	navlist.classList.toggle('open');
-// topNav.classList.toggle('open');
 };
 
 window.onscroll = () => {
 	menu.classList.remove('bx-x');
 	navlist.classList.remove('open');
-// topNav.classList.remove('open');
 };
+

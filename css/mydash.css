@@ -26,9 +26,10 @@
 
 #menu-icon{
 	font-size: 35px;
-	color: red;
+	color: black;
 	cursor: pointer;
 	display: none;
+  margin-top: -5px;
 }
 @media (max-width: 840px){
 	#menu-icon{
