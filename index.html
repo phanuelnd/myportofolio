@@ -9,7 +9,7 @@
 	 <link rel="stylesheet"
   href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 
-  <script type="text/javascript" src="js/script.js"></script>
+
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -308,7 +308,7 @@
 	
 	  let insBtn = document.getElementById("sendButton");
   
-	  async function AddDocument_AutoID(){
+	  async function sendMessage(){
 		var ref = collection(db, 'clientMessage');
 	
 		const docRef = await addDoc(ref, {
@@ -325,7 +325,8 @@
 		})
 		console.log('document id is: '+ docRef.id);
 	}
-	insBtn.addEventListener('click', AddDocument_AutoID);
+	insBtn.addEventListener('click', sendMessage);
 			</script>  
+			  <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
