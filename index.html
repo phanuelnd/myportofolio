@@ -9,6 +9,8 @@
 	 <link rel="stylesheet"
   href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 
+  <script type="text/javascript" src="js/script.js"></script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -239,8 +241,7 @@
 		</div>
 
 		<div class="contact-form" id="Contact"> 
-			<form onsubmit="return validateForm()">
-				<input type="name" placeholder="Provide your name..." id="contact_name" onkeyup="validateName()">
+			<input type="name" placeholder="Provide your name..." id="contact_name" onkeyup="validateName()">
 				<span id="nerror"></span>
 				<input type="text" placeholder="Your Email Address" id="contact_email" onkeyup="validateEmail()"> 
 				<span id="emailerror"></span>
@@ -252,13 +253,12 @@
 	</textarea>
 				<span id="errormessage"></span>
 
-						<!-- <input type="submit" onclick="return validateForm()" id="send_btn" class="submit" value="Send">
-                                    <span id="submit-error"></span> -->
 
 
-									<input type="submit" onclick="return validateForm()" id="send_btn" value="Send" class="submit">
-                                    <span id="senderror"></span>
-			</form>
+		<input type="submit" onclick="return validateForm()" id="sendButton" value="Send" class="submit">
+		<span id="senderror"></span>
+                                    
+			
 		</div>
 	</section>
 
@@ -274,7 +274,58 @@
 	</section>
 
 	<!---custom JavaScript js link--->
-	<script type="text/javascript" src="js/script.js"></script>
+		<script type="module">
 
+			import {
+	  getFirestore, doc, getDoc, setDoc, collection, addDoc, updateDoc, deleteDoc, deleteField
+	} from "https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js"
+  
+  
+  
+			  // Import the functions you need from the SDKs you need
+			  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+			  // TODO: Add SDKs for Firebase products that you want to use
+			  // https://firebase.google.com/docs/web/setup#available-libraries
+			
+			  // Your web app's Firebase configuration
+			  const firebaseConfig = {
+				apiKey: "AIzaSyB1VHGNrwTmCiYhONPl8yE6GvwpZsQnLT4",
+				authDomain: "mydashboard-d0814.firebaseapp.com",
+				projectId: "mydashboard-d0814",
+				storageBucket: "mydashboard-d0814.appspot.com",
+				messagingSenderId: "282132150467",
+				appId: "1:282132150467:web:6a0982aff64acd6e6eca76"
+			  };
+			
+			  // Initialize Firebase
+			  const app = initializeApp(firebaseConfig);
+			  const db = getFirestore();
+    
+  let NameBox = document.getElementById("contact_name");
+	  let RollBox = document.getElementById("contact_email");
+	  const SecBox = document.getElementById("contact_phone");
+	  let GenBox = document.getElementById("message");
+	
+	  let insBtn = document.getElementById("sendButton");
+  
+	  async function AddDocument_AutoID(){
+		var ref = collection(db, 'clientMessage');
+	
+		const docRef = await addDoc(ref, {
+		  names: NameBox.value,
+		  emails: RollBox.value,
+		  phones: SecBox.value,
+		  messages: GenBox.value
+		})
+  .then(() =>{
+			alert("Data inserted Successfully");
+		})
+		.catch((error) =>{
+			alert("unSuccessfull operation, errro " + error);
+		})
+		console.log('document id is: '+ docRef.id);
+	}
+	insBtn.addEventListener('click', AddDocument_AutoID);
+			</script>  
 </body>
 </html>

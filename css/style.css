@@ -403,11 +403,11 @@ header.sticky{
 	color: var(--main-color);
 }
 
-.contact-form form{
+.contact-form {
 	position: relative;
 }
-.contact-form form input,
-form textarea{
+.contact-form  input,
+ textarea{
 	width: 100%;
 	padding: 14px;
 	background: var(--bg-color);
