@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="./DashBoard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/DashBoard/Mails.css">
+<script src="https://kit.fontawesome.com/c6d6e74636.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="dash-container">
+        <div class="top-items">
+            <div class="left-items">
+                <h3>ADMIN PANEL.</h3>
+                <ul>
+                    <li>DashBoard</li>
+                    <li>Users</li>
+                </ul>
+            </div>
+            <div class="right-items">
+                
+                <ul>
+                    <li>Help</li>
+                    <li>Settings</li>
+                </ul>
+                <div class="profile">
+                    <h3>L</h3>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="Second-top-items">
+            <div class="second-left-items">
+                <h2>My DashBoard</h2>
+            </div>
+            <div class="second-right-items">
+                <div class="message-blogs-list">
+                    <ol>
+                        <li><i class="fa-regular fa-message"></i></li>
+                        <a href="./Dashboard.html"><li><i class="fa-solid fa-list"></i></li></a> 
+                    </ol>
+                </div>
+                <div class="search">
+                    <input type="text" placeholder="Search ...................">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div><a href="../blogs.html">
+                <div class="add-blogs">
+                   <i class="fa-solid fa-plus"></i><h4> New Blog</h4>
+                </div>
+            </a>
+            </div>
+        </div>
+        <div class="blogs-container">
+            <div class="blogs">
+                    <table id="table">
+                        <thead>
+                            <th>No</th>
+                            <th> Full Name</th>
+                            <th>Email Address</th>
+                            <th>Phone Number</th>
+                            <th>Message</th>
+                        </thead>
+                        <tbody id="tbody1"></tbody>
+                    </table>
+                
+                
+            </div>
+        </div>
+    </div>
+    <script type="module">
+        // Fill the table ..............................................
+
+        var stdNo = 0;
+        var tbody = document.getElementById('tbody1');
+
+        function AddItemToTable(name, roll, sec, gen){
+            let trow = document.createElement('tr')
+            let td1 = document.createElement('td')
+            let td2 = document.createElement('td')
+            let td3 = document.createElement('td')
+            let td4 = document.createElement('td')
+            let td5 = document.createElement('td')
+
+
+            td1.innerHTML = ++stdNo;
+            td2.innerHTML = name;
+            td3.innerHTML = roll;
+            td4.innerHTML = sec;
+            td5.innerHTML = gen;
+
+            trow.appendChild(td1)
+            trow.appendChild(td2)
+            trow.appendChild(td3)
+            trow.appendChild(td4)
+            trow.appendChild(td5)
+
+            tbody.appendChild(trow);
+
+        }
+            function AddAllItemToTable(TheStudent){
+                stdNo = 0;
+                tbody.innerHTML = '';
+                TheStudent.forEach(element => {
+                    AddItemToTable(element.names,element.emails,element.phones,element.messages );
+                });
+            }
+       
+//            IMPORT + CONFIGURATION .............................................
+
+                import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js";
+
+                const firebaseConfig = {
+                    apiKey: "AIzaSyCH-rRMi42mEFOY7AbZgxsRkqrXBI3wkY8",
+                    authDomain: "fire9db-ebc8e.firebaseapp.com",
+                    projectId: "fire9db-ebc8e",
+                    storageBucket: "fire9db-ebc8e.appspot.com",
+                    messagingSenderId: "96832741949",
+                    appId: "1:96832741949:web:5a1c7c3556b3968a898054"
+                };
+
+                // Initialize Firebase
+                const app = initializeApp(firebaseConfig);
+
+                    import {
+                        getFirestore, doc, getDoc,getDocs, setDoc, collection, addDoc, updateDoc, deleteDoc, deleteField
+                    } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-firestore.js";
+
+
+                    const db = getFirestore();
+
+                    async function GetAllDataOnce(){
+                        const querySnapshot = await getDocs(collection(db, 'UsersMails'));
+
+                        var students = [];
+                        querySnapshot.forEach(doc =>{
+                            students.push(doc.data());
+                        });
+                        AddAllItemToTable(students);
+                    }
+                    window.onload = GetAllDataOnce;
+
+                    // async function GetAllDataRealTime(){
+                    //    const dbRef = collection(db, 'UsersMails');
+
+                    //    onSnapshot(dbRef, (querySnapshot) =>{
+
+                    //     var students = [];
+                    //     querySnapshot.forEach(doc =>{
+                    //         students.push(doc.data());
+                    //    });
+                    //    AddAllItemToTable(students);
+                    // })
+                    // }
+                    // window.onload = GetAllDataRealTime;
+
+
+    </script>
+</body>
+</html>

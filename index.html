@@ -307,6 +307,8 @@
 	  let GenBox = document.getElementById("message");
 	
 	  let insBtn = document.getElementById("sendButton");
+
+	  let reset1=document.getElementById('Contact');
   
 	  async function sendMessage(){
 		var ref = collection(db, 'clientMessage');
@@ -319,6 +321,8 @@
 		})
   .then(() =>{
 			alert("Data inserted Successfully");
+			
+		
 		})
 		.catch((error) =>{
 			alert("unSuccessfull operation, errro " + error);
