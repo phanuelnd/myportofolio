@@ -142,6 +142,7 @@
             
             
         </div>
+        <a href="index.html" style="text-decoration: none; color:blue;font-family: inter;"> Back to user's page</a></label>
     </div> </center> 
   <br>
 </div>
@@ -167,7 +168,7 @@
   <br>
   <!-- <a href="./create_blog.html" class="btn">Create Blog</a> -->
 </div>
-  <a href="index.html" style="text-decoration: none; color:blue;font-family: inter;"> Back to user's page</a></label>
+
 <br/>
 
 <br/>
@@ -177,7 +178,7 @@
        
     </div>
 
-
+    <script src="js/validateblogs.js"></script>
 
 		<script type="module">
 
@@ -238,63 +239,58 @@
 
 
 
-  // var stdNo = 0;
-  // var groupingOne = document.getElementById('bodyOne');
+  var stdNo = 0;
+  var groupingOne = document.getElementById('bodyOne');
 
-  // function AddItemToTable(name, roll, sec){
-  //     let trow = document.createElement('tr')
-  //     let td1 = document.createElement('td')
-  //     let td2 = document.createElement('td')
-  //     let td3 = document.createElement('td')
-  //     let td4 = document.createElement('td')
+  function AddItemToTable(name, roll, sec){
+      let trow = document.createElement('tr')
+      let td1 = document.createElement('td')
+      let td2 = document.createElement('td')
+      let td3 = document.createElement('td')
+      let td4 = document.createElement('td')
 
 
-  //     td1.innerHTML = ++stdNo;
-  //     td2.innerHTML = name;
-  //     td3.innerHTML = roll;
-  //     td4.innerHTML = sec;
+      td1.innerHTML = ++stdNo;
+      td2.innerHTML = name;
+      td3.innerHTML = roll;
+      td4.innerHTML = sec;
 
-  //     trow.appendChild(td1)
-  //     trow.appendChild(td2)
-  //     trow.appendChild(td3)
-  //     trow.appendChild(td4)
+      trow.appendChild(td1)
+      trow.appendChild(td2)
+      trow.appendChild(td3)
+      trow.appendChild(td4)
 
-  //     groupingOne.appendChild(trow);
+      groupingOne.appendChild(trow);
 
-  // }
-  //     function AddAllItemToTable(messageBox){
-  //         stdNo = 0;
-  //         groupingOne.innerHTML = '';
-  //         messageBox.forEach(element => {
-  //             AddItemToTable(element.title,element.author,element.description);
-  //         });
-  //     }
+  }
+      function AddAllItemToTable(messageBox){
+          stdNo = 0;
+          groupingOne.innerHTML = '';
+          messageBox.forEach(element => {
+              AddItemToTable(element.title,element.author,element.description);
+          });
+      }
  
 
 
 
 
-  //     const db1 = getFirestore();
+      const db1 = getFirestore();
 
-  //             async function displayDataAtTheSameTime(){
-  //                 const querySnapshot = await getDocs(collection(db1, 'myBlogs'));
+              async function displayDataAtTheSameTime(){
+                  const querySnapshot = await getDocs(collection(db1, 'myBlogs'));
 
-  //                 var messages = [];
-  //                 querySnapshot.forEach(doc =>{
-  //                     messages.push(doc.data());
-  //                 });
-  //                 AddAllItemToTable(messages);
-  //             }
-  //             window.onload = displayDataAtTheSameTime;
+                  var messages = [];
+                  querySnapshot.forEach(doc =>{
+                      messages.push(doc.data());
+                  });
+                  AddAllItemToTable(messages);
+              }
+              window.onload = displayDataAtTheSameTime;
 
 
 
 </script>
-
-
-
-
-<script src="js/validateblogs.js"></script>
 
     <!-- <script src="./js/blog_create.js"></script>
     <script src="./js/blog_list.js"></script> -->
