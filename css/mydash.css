@@ -427,11 +427,23 @@ div.desc {
   font-weight: 500;
   font-style: italic;
 }
+.fa-solid
+{
+  color: green;
+}
+#descriptionerror,#authorerror,#titleerror
+{
+  color: red;
+  margin-left: 8px;
+}
 .allBlogs
 {
   height: 40%;
   width: 140%;
   margin-left: 30%;
+}
+.blogs{
+  margin-left: 160%;
 }
 #delete,#edit,#more
 {
