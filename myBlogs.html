@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
-    <title>My message</title>
+    <title>My Blogs</title>
    
     <link rel="stylesheet" href="css/mydash.css">
     <link rel="stylesheet" href="css/blog_list.css">
@@ -38,8 +38,8 @@
              
                 <div class="side-title"><p>Menu</p></div>
                 <ul class="navList">
-                    <li>Home</li>
-                    <li>Blog</li>
+                    <li><a href="Dashboard.html"></a>Home</li>
+                    <li><a href="myBlogs.html"></a>Blog</li>
                     <li><a href="message.html">Message</a></li>
                     <li>Notification</li>
                 </ul>
@@ -54,13 +54,10 @@
     </div> 
 
  
-<br/><br/>
+<br/>
 
 <div class="blog-container" id="blog">
-    <br/>
-    <br/>
-
-    <div class="blogs-container">
+        <div class="blogs-container">
         <div class="blogs">
                 <table id="table" border="1">
                     <thead>
@@ -125,18 +122,24 @@ function AddItemToTable(title, author,description){
   let td2 = document.createElement('td')
   let td3 = document.createElement('td')
   let td4 = document.createElement('td')
+  let td5 = document.createElement('td')
+  let td6 = document.createElement('td')
 
 
   td1.innerHTML = ++numbering;
   td2.innerHTML = title;
   td3.innerHTML = author;
   td4.innerHTML = description;
+  td5.innerHTML='<button><img src="img/editicon.png" class="icons"></button>';
+  td6.innerHTML='<button><img src="img/deleteicon.png" class="icons"></button>';
 
 
   trow.appendChild(td1)
   trow.appendChild(td2)
   trow.appendChild(td3)
   trow.appendChild(td4)
+  trow.appendChild(td5)
+  trow.appendChild(td6)
 
 
   groupingToTable.appendChild(trow);
